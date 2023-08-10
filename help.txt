@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   string sum;
+   int i,j;
+   cin>>sum;
+   for(i=0;i<sum.size();i=i+2){
+    for(j=0;j<sum.size()-1;j=j+2){
+            cout<<sum<<endl;
+    if (sum[j]>sum[j+2]){
+        swap(sum[j+2],sum[j]);
+    }}
+
+
+   }
+   cout<<sum<<endl;
+    return 0;
+}
