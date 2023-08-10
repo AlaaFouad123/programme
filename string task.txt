@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+ string a;
+ int x,y;
+ cin>>a;
+ x=a.length();
+ for(int i=0;i<x;i++){
+    if(a[i]!='a'&&a[i]!='A'&&a[i]!='e'&&a[i]!='E'&&a[i]!='o'&&a[i]!='O'&&a[i]!='i'&&a[i]!='I'&&a[i]!='u'&&a[i]!='U'&&a[i]!='y'&&a[i]!='Y'){
+            if(a[i]>64&&a[i]<91){
+                a[i]=a[i]+32;
+            }
+    cout<<"."<<a[i];
+ }}
+    return 0;
+}
