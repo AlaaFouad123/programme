@@ -1,0 +1,47 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x, y ,z ,c;
+    cin>>x>>y;
+    int a[x];
+    a[0]=1;
+    for(int i =0 ; i<x;i++){
+             cin>>a[i];
+             c=a[0];
+            for(int v=0 ; v<x-2;v++){
+
+
+          if(a[i]<a[v]){
+            z=a[v];
+            a[v]=a[i];
+            a[i]=z;
+        }
+          if(a[i]>a[v]){
+                z=a[i];
+            a[i]=a[v];
+            a[v]=z;
+
+
+        }}
+
+    }
+    a[x-1]=c;
+     int g =2;
+    for(int i =0; i<y;i++){
+
+        if(a[x-g]<c){
+            cout<<a[x-g];
+
+        }
+    else{
+        cout<<c<<' ';
+    }
+    g++;
+    }
+
+
+    return 0;
+}
