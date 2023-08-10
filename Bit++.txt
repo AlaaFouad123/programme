@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+int x= 0 , y=0 ;
+cin>>y;
+string h;
+
+for(int i =0; i<y;i++){
+    cin >> h;
+    if(h=="X++" || h =="++X"){
+        x++;
+    }
+    else{
+        x--;
+    }
+
+}
+cout<<x<<endl;
+}
