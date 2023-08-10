@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x,y ,z,u=0;
+    cin>>x>>y;
+    string a;
+    cin>>a;
+    while(u<y){
+        for(int i=x-1; i>0 ;i--){
+            if(a[i]=='G'){
+                z=a[i];
+                a[i]=a[i-1];
+                a[i-1]=z;
+            }
+        }
+        u++;
+    }
+  cout<<a;
+    return 0;
+}
