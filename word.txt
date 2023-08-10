@@ -1,0 +1,32 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string a;
+    cin>>a;
+    int x, y=0 , z=0;
+    x=a.length();
+    for(int i =0 ; i<x ; i++){
+        if(a[i]>64&&a[i]<91){
+            y++;
+        }
+        if(a[i]>=97 && a[i]<=122){
+            z++;
+        }
+    }
+   
+    if(y>z){
+         transform(a.begin(), a.end(), a.begin(), ::toupper);
+    }
+    if(z>y){
+         transform(a.begin() , a.end() , a.begin() , ::tolower);
+    }
+    if(y==z){
+        transform( a.begin() , a.end() , a.begin(), ::tolower);
+    }
+
+    cout<<a;
+    return 0;
+}
