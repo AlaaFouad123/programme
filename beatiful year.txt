@@ -1,0 +1,46 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,c=10, z=0,m, v=0;
+    int b[4];
+    int i=0;
+    int t=10;
+    cin>>a;
+    while(z!=12)
+    {
+        a=a+1;
+        b[0]=a%10;
+        m=a/10;
+        b[1]=m%10;
+        m=a/100;
+        b[2]=m%10;
+        m=a/1000;
+        b[3]=m;
+      
+        for(int u =0 ; u<4 ; u++)
+        {
+            for(int y=0 ; y<4 ; y++)
+            {
+                if(b[u]!=b[y])
+                {
+                    z++;
+
+                }
+
+                if(z==12)
+                {
+                    cout<<a;
+                    return 0;
+                }
+
+            }
+
+        }
+    z=0;
+    }
+    cout<<a;
+    return 0;
+}
