@@ -1,0 +1,47 @@
+#include <iostream>
+#include <fstream>
+#include <filesystem>
+#include <string>
+#include <string.h>
+using namespace std;
+
+int main()
+{
+    cout << "enter your message...\n" << endl;
+    string plain;
+    getline(cin,plain);
+    ofstream file("C:\\Users\\pc\\Documents\\plain.txt", ios::app);
+    file<<"\n";file<< plain;
+      file.close();
+    char alp[26]={'a' , 'b' , 'c' , 'd' , 'e' , 'f' , 'g', 'h' , 'i' , 'k' , 'l' , 'm' , 'n' , 'o' , 'p' , 'q' , 'r' , 's' , 't' , 'u' , 'v' , 'w' , 'x' , 'y' , 'z'};
+    for(int i =0 ; i<plain.size();i++){
+     for(int y =0 ; y<26 ; y++){
+
+        if(plain[i]==alp[y]){
+            if(y+3>25){
+                plain[i]=alp[y+3-25];
+
+              break;
+            }
+            else{
+            plain[i]=alp[y+3];
+
+              break;
+            }
+        }
+        if(plain[i]==' '){
+            plain[i]='0';
+
+              break;
+        }
+
+     }
+    }
+     ofstream file2("C:\\Users\\pc\\Documents\\result.txt", ios::app);
+    file2<<"\n"; file2<< plain;
+      file2.close();
+      cout<<"\nYour encrypted message :  ";
+      cout<<plain<<"\n";
+
+    return 0;
+}
