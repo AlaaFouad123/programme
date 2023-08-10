@@ -1,0 +1,17 @@
+#include <iostream>
+#include<bits/stdc++.h>
+#include <vector>
+using namespace std;
+
+int main()
+{
+ long long x,y=0;
+ cin>>x;
+ for(long long i = 2 ; i<=x ; i++){
+    if(x%i==0){
+        y++;
+    }
+ }
+cout<<y;
+    return 0;
+}
