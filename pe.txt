@@ -1,0 +1,55 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   string a,b;
+   cin>>a>>b;
+   int z,c=0,k;
+   z=a.size();
+
+     for(int i=0 ;i<z ;i++){
+           a[i]= toupper(a[i]);
+           b[i]= toupper(b[i]);
+        }
+      if(z==1){
+         if(a[0]>b[0]){
+            cout<<"1";
+            return 0;
+         }
+         if(a[0]<b[0]){
+            cout<<"-1";
+            return 0;
+         }
+         if(a[0]==b[0]){
+            cout<<"0";
+            return 0;
+         }
+      }
+     for(int i=0; i<z;i++){
+     if(a[i]>b[i]){
+        c=1;
+        break;
+     }
+      if(a[i]<b[i]){
+        c=-1;
+        break;
+     }
+      else{
+        c++;
+      }
+
+     }
+     if(c==z){
+        cout<<"0";
+     }
+     else{
+        cout<<c;
+     }
+
+
+
+
+    return 0;
+}
