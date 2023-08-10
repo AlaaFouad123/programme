@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n ,m ,b ,v ;
+    cin>>n >>m;
+    b = n*m;
+    v = b/2;
+    cout<<v<<endl;
+    return 0;
+}
