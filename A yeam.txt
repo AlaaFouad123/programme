@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int n;cin>>n;
+    int a , b ,f=0, c;
+    for(int i=0; i <n; i++){
+       int cnt =0;
+        cin >>a;
+        cin >>b;
+        cin >>c;
+       if(a == 1) cnt++;
+       if(b == 1) cnt++;
+       if(c == 1) cnt++;
+       if(cnt >=2)
+       f++;
+    }
+   cout<<f<<endl;
+}
