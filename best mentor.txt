@@ -1,0 +1,38 @@
+#include <iostream>
+#include <bits/stdc++.h>
+#include <algorithm>
+#include <sstream>
+#include<string>
+using namespace std;
+int main() {
+    long long a ,y=0,h;
+   string aa;
+   cin>>a;
+   h=a;
+   ostringstream str1;
+    str1 << a;
+    aa= str1.str();
+   string b =aa;
+   long long x=0;
+   long long z = aa.length();
+   reverse(aa.begin(),aa.end());
+   for(long long i =0 ; i<z ;i++){
+   x=x+h%10;
+   h=h/10;
+   }
+   if(a%x==0){
+    y++;
+   }
+   if(aa==b){
+    y++;
+   }
+
+   if(y==2)
+    cout<<"Best mentor.";
+    if(y==1)
+    cout<<"He's good.";
+   if(y==0)
+    cout<<"He'll be fired.";
+   return 0;
+}
+
