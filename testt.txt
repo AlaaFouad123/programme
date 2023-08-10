@@ -1,0 +1,27 @@
+#include <iostream>
+#include<bits/stdc++.h>
+#include <vector>
+using namespace std;
+
+int main()
+{
+int x,y,n,m=1,f;
+cin>>x;
+int a[x];
+for(int i =0 ; i<x ;i++){
+    cin>>y;
+    int b[y];
+    for(int u=0 ; u<y ; u++){
+     cin>>b[u];
+    }
+    n=sizeof(b)/sizeof(b[0]);
+    sort(b,b+n);
+    for(int h=0 ; h<y ; h++){
+       
+
+}
+for(int r=0 ; r<x ; r++){
+    cout<<a[r]<<endl;
+}
+    return 0;
+}
