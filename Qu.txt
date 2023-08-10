@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int x,z=0 , y=0;
+   string a;
+   cin>>x>>a;
+   for(int i=0 ; i<x ; i++){
+    if(a[i]=='A'){
+        z++;
+    }
+    if(a[i]=='D'){
+        y++;
+    }
+   }
+   if(z>y){
+    cout<<"Anton";
+    return 0;
+   }
+   if(y>z){
+    cout<<"Danik";
+   }
+   else{
+    cout<<"Friendship";
+   }
+    return 0;
+}
