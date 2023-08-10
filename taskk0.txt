@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void calc(char arr[],int size,int comp1, int index,float ch){
+
+ if(index ==size-1){
+    return 0;}
+    else{
+    for(int i =0 ; i<size; i++){
+              if(arr[i]!=' '&& arr[i]!='}'&& arr[i]!='{' && arr[i]!=','&& arr[index]==arr[i]){
+                comp1++;
+                if(i!=index){
+                    arr[i]='}';
+                }
+               }
+        }
+       if(comp1>=ch/2.0)
+
+         printf(" \n %c  ",arr[index]);
+         comp1=0;
+            calc(arr,size,comp1,(index+1),ch);
+
+}}
+
+
+int main()
+{
+   char arr[200];
+   int comp1=0;
+   int max=0;
+   int index=0;
+   int y=0;
+   int size=0;
+   float ch=0;
+   char x='}';
+
+   do{
+    scanf("%c",&arr[y]);
+     if(arr[y]!=' '&& arr[y]!='}'&& arr[y]!='{' && arr[y]!=','){
+    ch++;
+   }
+    y++;
+   size++;
+
+   }while(arr[y-1]!=x);
+
+    calc(arr,size,comp1,index,ch);
+
+
+
+
+    return 0;
+}
