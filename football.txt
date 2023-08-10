@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x,y=0;
+    string a;
+    cin>>a;
+    x=a.length();
+    for(int i=0 ; i<x-1 ;i++){
+        if(a[i]==a[i+1]){
+            y++;
+        }
+        else if(a[i]!=a[i+1]&&y<6){
+            y=0;
+        }
+
+    }
+     if(y>=6){
+            cout<<"YES";
+        }
+        else
+            cout<<"NO";
+    return 0;
+}
