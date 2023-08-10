@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x,y,z=0;
+    string a;
+    cin>>x>>a;
+    for(int i =0 ; i<x;i++){
+        if(i>0){
+            if(a[i]==a[i-1]){
+                z++;
+            }
+        }
+    }
+    cout<<z;
+    return 0;
+}
