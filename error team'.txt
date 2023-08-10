@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int n;cin>>n;
+    int a , b ,f=0, c;
+    for(int i=0; i <n; i++){
+        cin >>a >>b >>c;
+        if ((a ==0 || a==1) && (b==0 || b==1) &&(c==0 || b==1)){
+            if((a+b+c)==2||(a+b+c)==3){
+                f++;
+            }
+
+        }
+    }
+   cout<<f<<endl;
+}
