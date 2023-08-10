@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a , b ,c;
+    cin>>a>>b>>c;
+   int aa[5];
+    aa[0]=a*(b+c);
+    aa[1]=(a+b)*c;
+    aa[2]=a+(b*c);
+    aa[3]=a*b*c;
+    aa[4]=a+b+c;
+    for(int i =0 ; i<4; i++){
+        if(aa[i]>aa[i+1]){
+            aa[i+1]=aa[i];
+        }
+    }
+    cout<<aa[4];
+    return 0;
+}
