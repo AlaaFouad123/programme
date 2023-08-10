@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x,y=0,z=0;
+    cin>>x;
+    int a[x][2];
+    int b[x];
+    b[0]=0;
+    for(int i=0 ; i<x ; i++){
+        for(int u=0 ; u<2 ;u++){
+            cin>>a[i][u];
+        }
+    }
+    for(int i=0 ; i<x-1 ;i++){
+        z=a[i][y+1]-a[i][y];
+        b[i+1]=b[i]+z+a[i+1][y+1]-a[i+1][y];
+    }
+    for(int i=0 ; i<x-1 ; i++){
+        if(b[i+1]>b[i+2]){
+            b[i+1]=b[i];
+        }
+    }
+    cout<<b[x-2];
+    return 0;
+}
